@@ -16,12 +16,16 @@
 	font-size: 18px;
     font-weight: bold;
 }
-.add{
+.member .add{
 	background: #8BC34A;
     color: #fff;
     font-size: 12px;
+    margin: 0px 10px 0px 0px;
     padding: 5px 15px;
     text-decoration: none;
+}
+.member .add:last-child{
+    background: #FF5722;
 }
 .sousuo{
 	background: rgba(0, 0, 0, 0.7);
