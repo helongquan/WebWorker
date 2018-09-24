@@ -1,57 +1,53 @@
 //a simple group member data example
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-	$.ajax({
-        // url: "../WebWorker/data.json",
-        url: "/api/webworker/getmember",
-        type: "get",
-        dataType:"json",
-        contentType: "application/json",
-        success: function (res) {
-            if (typeof res === 'string') {
-                res = JSON.parse(res);
-            }
-            console.log(res);
-            renderGroupMembers(res);
-        },
-        error: function (xhr, err, exception) {
-            console.log(err);
-            $("#msg").html(err);
-        }
-    });
+// 	$.ajax({
+//         // url: "../WebWorker/data.json",
+//         url: "/api/webworker/getmember",
+//         type: "get",
+//         dataType:"json",
+//         contentType: "application/json",
+//         success: function (res) {
+//             if (typeof res === 'string') {
+//                 res = JSON.parse(res);
+//             }
+//             console.log(res);
+//             // renderGroupMembers(res);
+//         },
+//         error: function (xhr, err, exception) {
+//             console.log(err);
+//             $("#msg").html(err);
+//         }
+//     });
 
-});
+// });
 
 var groupMembers = [
-	// {
-	// 	id: 101,
-	// 	name: 'John Li',
-	// 	skills: 'Java programming, Python language, MySQL'
-	// },
-	// {
-	// 	id: 102,
-	// 	name: 'Lisa Wang',
-	// 	skills: 'HTML, JavaScript, CSS, Node.js'
-	// },
-	// {
-	// 	id: 103,
-	// 	name: 'Tom Wang',
-	// 	skills: 'JavaScript, CSS, HTML5'
-	// },
-	// {
-	// 	id: 104,
-	// 	name: 'Andy Zhang',
-	// 	skills: 'PHP language, JavaScript programming, CSS'
-	// }
+{
+	id: 101,
+	name: 'John Li',
+	skills: 'Java programming, Python language, MySQL'
+},
+{
+	id: 102,
+	name: 'Lisa Wang',
+	skills: 'HTML, JavaScript, CSS, Node.js'
+},
+{
+	id: 103,
+	name: 'Tom Wang',
+	skills: 'JavaScript, CSS, HTML5'
+},
+{
+	id: 104,
+	name: 'Andy Zhang',
+	skills: 'PHP language, JavaScript programming, CSS'
+}
 	/*
 		a large number of data
 	*/
 ];
-
-// function changeData(res){
-//     groupMembers = res;
-// }
 
  
 //loading the worker.js to instantiate a Worker object
